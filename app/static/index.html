@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf8ef">
+  <meta name="description" content="Explore molecular structures, atom hybridization, and functional groups from SMILES or condensed structural formulas.">
+  <title>carbo cat · Your curious chemistry companion</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="carbo cat home">
+      <img class="brand-mark" src="/static/favicon.svg" alt="">
+      <span>carbo cat<span class="brand-dot">.</span></span>
+      <span class="version-badge">a little beta</span>
+    </a>
+    <span class="header-note"><span class="status-dot"></span>Made for curious minds</span>
+    <a class="text-link" href="#guide">How it works <svg class="arrow-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow hero-eyebrow"><svg class="paw-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><ellipse cx="5" cy="8" rx="2.4" ry="3.2" transform="rotate(-25 5 8)"/><ellipse cx="10" cy="5" rx="2.2" ry="3"/><ellipse cx="16" cy="5.5" rx="2.2" ry="3" transform="rotate(12 16 5.5)"/><ellipse cx="20" cy="10" rx="2.2" ry="3" transform="rotate(30 20 10)"/><path d="M6 16c0-2 3-7 6-7s6 5 6 7c0 4-4 1-6 1s-6 3-6-1Z"/></svg>YOUR CURIOUS CHEMISTRY COMPANION</p>
+        <h1 id="page-title">Curious cats make<br>great <span class="hero-highlight">chemists.</span></h1>
+        <p class="intro-description">A little input, a whole lot to discover. Draw molecules, spot functional groups, and get to know every atom.</p>
+      </div>
+      <div class="intro-decoration"><img src="/static/cat.svg" alt="A smiling orange cat in a lavender lab coat holding a chemistry flask."><span class="mascot-caption">your lab buddy, carbo</span></div>
+    </section>
+
+    <div class="workspace">
+      <aside class="input-column">
+        <section class="panel input-panel" aria-labelledby="input-title">
+          <div class="panel-heading"><span class="step-label">01</span><h2 id="input-title">Start with a molecule</h2></div>
+          <form id="molecule-form">
+            <fieldset class="format-fieldset">
+              <legend>Input format</legend>
+              <div class="segmented-control">
+                <label><input type="radio" name="format" value="auto" checked><span>Auto</span></label>
+                <label><input type="radio" name="format" value="smiles"><span>SMILES</span></label>
+                <label><input type="radio" name="format" value="condensed"><span>Condensed</span></label>
+              </div>
+            </fieldset>
+            <div class="input-label-row"><label for="molecule-input">Molecular input</label><button type="button" id="clear-input" class="small-text-button">Clear</button></div>
+            <textarea id="molecule-input" name="input" rows="3" maxlength="500" spellcheck="false" autocomplete="off" autocapitalize="off" aria-describedby="input-help input-error" placeholder="e.g. CH3CH2OH" required>CC(=O)Oc1ccccc1C(=O)O</textarea>
+            <p id="input-help" class="field-help">Enter SMILES or a condensed structural formula, such as CH3CH2OH.</p>
+            <p id="input-error" class="error-message" role="alert" hidden></p>
+            <button type="submit" class="primary-button" id="generate-button"><span id="generate-label">Generate structure</span><svg class="button-arrow arrow-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <p class="shortcut-note">Press <kbd>Enter</kbd> to explore</p>
+          </form>
+          <div class="examples-section">
+            <p class="mini-heading">A FEW FRIENDLY STARTING POINTS</p>
+            <div class="example-list">
+              <button type="button" class="example-button" data-example="aspirin"><span class="example-icon" aria-hidden="true">01</span><span><strong>Aspirin</strong><small>Esters &amp; carboxylic acids</small></span><svg class="example-arrow arrow-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <button type="button" class="example-button" data-example="ethanol"><span class="example-icon" aria-hidden="true">02</span><span><strong>Ethanol</strong><small>CH3CH2OH</small></span><svg class="example-arrow arrow-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <button type="button" class="example-button" data-example="caffeine"><span class="example-icon" aria-hidden="true">03</span><span><strong>Caffeine</strong><small>A closer look at ring chemistry</small></span><svg class="example-arrow arrow-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <button type="button" class="example-button" data-example="isopropanol"><span class="example-icon" aria-hidden="true">04</span><span><strong>Isopropanol</strong><small>CH3CH(CH3)OH</small></span><svg class="example-arrow arrow-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div>
+        </section>
+        <div class="learning-note"><svg class="note-symbol" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="m14 3 3 8 8 3-8 3-3 8-3-8-8-3 8-3 3-8Z" fill="#E9BB7D" stroke="#916C91" stroke-width="1.5" stroke-linejoin="round"/></svg><p><strong>A tiny tip from carbo</strong> In a skeletal drawing, an unlabeled corner or line end represents carbon. Hydrogens on carbon are usually left out.</p></div>
+      </aside>
+
+      <div class="results-column">
+        <section class="panel structure-panel" aria-labelledby="structure-title">
+          <div class="structure-toolbar">
+            <div class="viewer-title"><span class="step-label">02</span><div><h2 id="structure-title">Aspirin</h2><p id="molecule-subtitle">Skeletal structure</p></div></div>
+            <button type="button" class="export-button" id="export-svg" disabled><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2v10m-4-4 4 4 4-4M3 13v4h14v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Save SVG</button>
+          </div>
+          <div class="canvas-controls"><span class="canvas-caption"><span class="tiny-square"></span>2D STRUCTURE</span><label class="switch-label"><input type="checkbox" id="hybridization-toggle"><span class="switch-track" aria-hidden="true"></span><span>Hybridization</span></label></div>
+          <div id="structure-canvas" class="structure-canvas" aria-busy="true" role="group" aria-label="Molecular skeletal drawing">
+            <div class="canvas-placeholder" id="canvas-placeholder"><div class="loading-orbit" aria-hidden="true"></div><p>Preparing your molecule…</p></div>
+            <div id="svg-container" class="svg-container"></div>
+          </div>
+          <div class="canvas-bottom"><p id="canvas-hint"><span aria-hidden="true">⌖</span> Select an atom to explore its details</p><span class="canvas-credit">DRAWN WITH RDKIT</span></div>
+          <div class="molecule-metrics" aria-label="Molecule properties"><div><span class="metric-label">MOLECULAR FORMULA</span><strong id="metric-formula">—</strong></div><div><span class="metric-label">MOLAR MASS</span><strong><span id="metric-mass">—</span><small> g/mol</small></strong></div><div><span class="metric-label">HEAVY ATOMS</span><strong id="metric-atoms">—</strong></div><div><span class="metric-label">BONDS</span><strong id="metric-bonds">—</strong></div></div>
+          <div class="canonical-row"><span>Canonical SMILES</span><code id="canonical-smiles">—</code><button type="button" id="copy-smiles" class="small-text-button" disabled>Copy</button></div>
+        </section>
+
+        <div class="details-grid">
+          <section class="panel groups-panel" aria-labelledby="groups-title">
+            <div class="details-heading"><div><p class="mini-heading">FIND THE PATTERNS</p><h2 id="groups-title">Functional groups <span class="count-badge" id="group-count">0</span></h2></div><button type="button" id="toggle-all-groups" class="small-text-button" disabled>Highlight all</button></div>
+            <p class="section-help">Choose a group to highlight it in the structure.</p>
+            <div id="functional-groups" class="functional-groups"><p class="empty-text">Groups will appear here.</p></div>
+          </section>
+          <section class="panel atoms-panel" aria-labelledby="atoms-title">
+            <div class="details-heading"><div><p class="mini-heading">LOOK A LITTLE CLOSER</p><h2 id="atoms-title">Atom inspector</h2></div><span class="atom-symbol-badge" id="selected-symbol" aria-hidden="true">C</span></div>
+            <label class="visually-hidden" for="atom-select">Choose an atom to inspect</label>
+            <select id="atom-select" disabled><option value="">Choose an atom in the drawing</option></select>
+            <div class="atom-properties"><div><span>Hybridization</span><strong id="atom-hybridization">—</strong></div><div><span>Attached H</span><strong id="atom-hydrogens">—</strong></div><div><span>Formal charge</span><strong id="atom-charge">—</strong></div><div><span>Aromatic</span><strong id="atom-aromatic">—</strong></div></div>
+            <p id="hybridization-explanation" class="atom-footnote">Choose an atom to see its bonding environment.</p>
+          </section>
+        </div>
+        <div id="warnings" class="warning-box" hidden></div>
+        <p id="request-status" class="request-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <section class="guide" id="guide" aria-labelledby="guide-title"><div><p class="eyebrow">CARBO’S LITTLE FIELD GUIDE</p><h2 id="guide-title">Small symbols. Big ideas.</h2></div><div><h3>SMILES</h3><p>A compact way to describe connectivity. Try <code>CCO</code> for ethanol or <code>c1ccccc1</code> for benzene. Letter case matters.</p></div><div><h3>Condensed formulas</h3><p>Use connected groups such as <code>CH3CH2OH</code> or <code>CH3CH(CH3)OH</code>. A molecular formula like <code>C2H6O</code> alone cannot identify one structure.</p></div><div><h3>Hybridization</h3><p><strong>sp³</strong>, <strong>sp²</strong>, and <strong>sp</strong> describe local bonding. These assignments are a useful chemical model, not a measurement of geometry.</p></div></section>
+    <footer><span class="footer-brand"><img src="/static/favicon.svg" alt="">carbo cat<span class="footer-dot">.</span></span><p>For big questions and little moments of discovery.</p><span>made with curiosity · 2026</span></footer>
+  </main>
+</body>
+</html>

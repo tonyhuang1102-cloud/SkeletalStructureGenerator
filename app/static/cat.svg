@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 285" fill="none">
+  <path d="M101 125C95 62 174 25 248 35c65 9 113 35 116 96 5 69-46 123-121 128-79 6-134-52-142-134Z" fill="#F9E5D1"/>
+  <path d="m73 45 5 12 13 4-13 5-5 13-4-13-13-5 13-4 4-12Z" fill="#C0A5E9" stroke="#715780" stroke-width="2" stroke-linejoin="round"/>
+  <path d="m348 220 4 9 10 3-10 4-4 10-3-10-10-4 10-3 3-9Z" fill="#F4CE73" stroke="#715780" stroke-width="2" stroke-linejoin="round"/>
+  <path d="m313 64 28-16 28 16v32l-28 16-28-16V64Z" stroke="#B092BA" stroke-width="2" stroke-linejoin="round"/>
+  <path d="m320 68 21-12m21 17v19m-44-2 21 12" stroke="#B092BA" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="371" cy="54" r="4" fill="#D9BEDF"/>
+  <path d="M280 228c30 8 63-4 61-26-2-17-23-16-25-5" stroke="#65486C" stroke-width="20" stroke-linecap="round"/>
+  <path d="M280 228c30 8 63-4 61-26-2-17-23-16-25-5" stroke="#EDBB83" stroke-width="15" stroke-linecap="round"/>
+  <path d="M170 169c18-17 78-18 95 0l18 63c-29 29-101 30-131 1l18-64Z" fill="#DDD0F0" stroke="#65486C" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="m184 160 31 22-15 25-22-34m69-13-32 22 17 24 21-35" fill="#FFF9F0" stroke="#65486C" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M149 115c-3-20-2-52 5-77 16 6 27 14 37 23 15-5 37-5 52 0 12-11 24-19 39-24 8 25 11 57 8 78 3 38-20 58-71 59-48 0-74-19-70-59Z" fill="#F2C58D" stroke="#65486C" stroke-width="2.7" stroke-linejoin="round"/>
+  <path d="m158 51 4 34 20-16-24-18Zm115 1-18 18 23 14-5-32Z" fill="#EEB5B1"/>
+  <path d="M211 61c-4 12-3 18 0 23m14-23c-1 10 0 15 3 19" stroke="#DCA66D" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="218" cy="135" rx="38" ry="25" fill="#FFF2D9"/>
+  <path d="M174 111c4-6 10-6 14 0m61 0c4-6 10-6 14 0" stroke="#65486C" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="169" cy="129" rx="11" ry="6" fill="#EC9FA0" opacity=".8"/>
+  <ellipse cx="269" cy="129" rx="11" ry="6" fill="#EC9FA0" opacity=".8"/>
+  <path d="m213 126 5 5 6-5h-11Z" fill="#9B677D" stroke="#9B677D" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M218 132v7m0-2c-4 8-13 5-13 0m13 0c4 8 13 5 13 0" stroke="#65486C" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="m151 127-21-4m22 12-22 2m155-10 22-4m-23 12 22 2" stroke="#87618A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M205 181h27m-23 0v20l-23 32c-6 10-2 18 10 18h47c12 0 16-8 10-18l-25-32v-20" fill="#FFFAF5" stroke="#65486C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m201 220-12 17c-3 5-1 10 6 10h49c7 0 9-5 5-10l-12-17c-12 6-24-5-36 0Z" fill="#BEA1E0"/>
+  <circle cx="218" cy="232" r="3" fill="#EEE4FA"/><circle cx="228" cy="239" r="2" fill="#EEE4FA"/>
+  <path d="M173 192c-16 1-17 25 0 28 10 2 18-5 17-14-1-8-8-14-17-14Zm91 0c17 1 17 25 1 28-10 2-19-5-18-14 1-8 8-14 17-14Z" fill="#F2C58D" stroke="#65486C" stroke-width="2.5"/>
+  <path d="m174 201 1 10m7-8 1 8m79-10-1 10m-7-8-1 8" stroke="#D9A66F" stroke-width="2" stroke-linecap="round"/>
+  <g transform="rotate(-10 89 180)"><rect x="48" y="138" width="65" height="71" rx="12" fill="#FFFAF0" stroke="#AA8CB6" stroke-width="2"/><text x="58" y="155" fill="#866394" font-family="Arial,sans-serif" font-size="10">6</text><text x="80" y="186" fill="#65486C" font-family="Arial,sans-serif" font-weight="700" font-size="29" text-anchor="middle">C</text><text x="80" y="201" fill="#866394" font-family="Arial,sans-serif" font-size="8" text-anchor="middle">curiosity</text></g>
+  <path d="m113 229 8 1m-3-13 5 5M92 94l-6 4m10 4-3 7" stroke="#C6A6BD" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
